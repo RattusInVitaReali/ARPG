@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Font/Font30.tres" type="DynamicFont" id=1]
+[ext_resource path="res://UI Images/Borders/Border5.png" type="Texture" id=2]
+[ext_resource path="res://GUI/StatButton/StatButton.gd" type="Script" id=3]
+[ext_resource path="res://GUI/StatTooltip/StatTooltip.tscn" type="PackedScene" id=4]
+
+
+
+[node name="StatButton" type="VBoxContainer"]
+margin_left = 7.0
+margin_right = 107.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 0, 140 )
+size_flags_horizontal = 3
+size_flags_vertical = 0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 3
+size_flags_vertical = 0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+
+[node name="TextureButton" type="TextureButton" parent="TextureRect"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 0
+expand = true
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Points" type="Label" parent="."]
+margin_top = 104.0
+margin_right = 100.0
+margin_bottom = 140.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Tooltip" parent="CanvasLayer" instance=ExtResource( 4 )]
+visible = false
+[connection signal="mouse_entered" from="TextureRect/TextureButton" to="." method="_on_TextureButton_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/TextureButton" to="." method="_on_TextureButton_mouse_exited"]
+[connection signal="pressed" from="TextureRect/TextureButton" to="." method="_on_TextureButton_pressed"]
+
+[editable path="CanvasLayer/Tooltip"]

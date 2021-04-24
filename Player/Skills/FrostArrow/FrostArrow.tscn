@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Utilities/Hitbox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ImageResources/Player/Skills/FrostArrow.png" type="Texture" id=2]
+[ext_resource path="res://Player/Skills/FrostArrow/FrostArrow.gd" type="Script" id=3]
+
+
+[node name="FrostArrow" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="FrostArrow" type="Sprite" parent="."]
+rotation = -2.35619
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="Hitbox" parent="." instance=ExtResource( 1 )]
+collision_mask = 9
+shape = false
+polygon = true
+
+[node name="CollisionPolygon2D" parent="Hitbox" index="1"]
+polygon = PoolVector2Array( -0.0650177, 4.61438, 14.4568, 1.94853, 16.0704, 0.124533, 14.8076, -1.76962, 5.89806, -4.43547, -0.485939, -5.34747 )
+[connection signal="area_entered" from="Hitbox" to="." method="_on_Hitbox_area_entered"]
+
+[editable path="Hitbox"]

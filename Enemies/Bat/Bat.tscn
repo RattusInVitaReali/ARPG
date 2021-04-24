@@ -1,0 +1,102 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Enemies/Bat/Bat.png" type="Texture" id=1]
+[ext_resource path="res://ImageResources/Shadows/SmallShadow.png" type="Texture" id=2]
+[ext_resource path="res://Utilities/Hurtbox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Utilities/Stats.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Utilities/PlayerDetectionZone.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Utilities/Healthbar.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Enemies/Bat/Bat.gd" type="Script" id=7]
+
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 16, 24 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 16, 0, 16, 24 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 0, 16, 24 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 0, 16, 24 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 0, 16, 24 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "Animation",
+"speed": 15.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=7]
+radius = 2.0
+height = 0.0
+
+[sub_resource type="CapsuleShape2D" id=8]
+radius = 6.0
+height = 2.0
+
+[sub_resource type="CircleShape2D" id=9]
+radius = 56.0089
+
+[node name="Bat" type="KinematicBody2D"]
+collision_layer = 40
+collision_mask = 33
+script = ExtResource( 7 )
+
+[node name="Stats" parent="." instance=ExtResource( 4 )]
+max_health = 2.0
+movement_speed = 100
+max_speed = 100
+acceleration = 300
+friction = 200
+base_armor = 5
+
+[node name="HealthBar" parent="." instance=ExtResource( 6 )]
+margin_left = -13.0
+margin_top = -30.0
+margin_right = -13.0
+margin_bottom = -30.0
+rect_scale = Vector2( 0.12, 0.12 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -12 )
+frames = SubResource( 6 )
+animation = "Animation"
+frame = 1
+playing = true
+
+[node name="ShadowSprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource( 7 )
+
+[node name="Hurtbox" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, -12 )
+collision_layer = 8
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2( 0, -3 )
+shape = SubResource( 8 )
+
+[node name="PlayerDetectionZone" parent="." instance=ExtResource( 5 )]
+
+[node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
+self_modulate = Color( 1, 1, 1, 0.47451 )
+shape = SubResource( 9 )
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+
+[editable path="Hurtbox"]
+
+[editable path="PlayerDetectionZone"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Items/ItemStats/ItemStats.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Items/Item/Item.gd" type="Script" id=2]
+
+
+[node name="Item" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ItemStats" parent="." instance=ExtResource( 1 )]

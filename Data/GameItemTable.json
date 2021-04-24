@@ -1,0 +1,181 @@
+{
+  "Weapons": {
+    "WoodenSword": {
+      "ItemSubtype": "Sword",
+      "ItemName": "Wooden Sword",
+      "Stackable": "No",
+      "ItemLevelRequirement": 0,
+      "ItemRarity": "Common",
+      "AffixGroup": "WeaponCommon"
+    },
+    "CopperSword": {
+      "ItemSubtype": "Sword",
+      "ItemName": "Copper Sword",
+      "Stackable": "No",
+      "ItemLevelRequirement": 5,
+      "ItemRarity": "Common",
+      "AffixGroup": "WeaponCommon"
+    },
+    "IronSword": {
+      "ItemSubtype": "Sword",
+      "ItemName": "Iron Sword",
+      "Stackable": "No",
+      "ItemLevelRequirement": 10,
+      "ItemRarity": "Common",
+      "AffixGroup": "WeaponCommon"
+    },
+    "SteelSword": {
+      "ItemSubtype": "Sword",
+      "ItemName": "Steel Sword",
+      "Stackable": "No",
+      "ItemLevelRequirement": 15,
+      "ItemRarity": "Common",
+      "AffixGroup": "WeaponCommon"
+    },
+    "WoodenDagger": {
+      "ItemSubtype": "Dagger",
+      "ItemName": "Wooden Dagger",
+      "Stackable": "No",
+      "ItemLevelRequirement": 0,
+      "ItemRarity": "Common",
+      "AffixGroup": "WeaponCommon"
+    },
+    "CopperDagger": {
+      "ItemSubtype": "Dagger",
+      "ItemName": "Copper Dagger",
+      "Stackable": "No",
+      "ItemLevelRequirement": 5,
+      "ItemRarity": "Common",
+      "AffixGroup": "WeaponCommon"
+    },
+    "IronDagger": {
+      "ItemSubtype": "Dagger",
+      "ItemName": "Iron Dagger",
+      "Stackable": "No",
+      "ItemLevelRequirement": 10,
+      "ItemRarity": "Common",
+      "AffixGroup": "WeaponCommon"
+    },
+    "SteelDagger": {
+      "ItemSubtype": "Dagger",
+      "ItemName": "Steel Dagger",
+      "Stackable": "No",
+      "ItemLevelRequirement": 15,
+      "ItemRarity": "Common",
+      "AffixGroup": "WeaponCommon"
+    }
+  },
+  "Armor": {
+    "LeatherHelmet": {
+      "ItemSubtype": "Head",
+      "ItemName": "Leather Helmet",
+      "Stackable": "No",
+      "ItemLevelRequirement": 0,
+      "ItemRarity": "Common",
+      "AffixGroup": "ArmorCommon"
+    },
+    "LeatherBoots": {
+      "ItemSubtype": "Feet",
+      "ItemName": "Leather Boots",
+      "Stackable": "No",
+      "ItemLevelRequirement": 0,
+      "ItemRarity": "Common",
+      "AffixGroup": "ArmorCommon"
+    },
+    "LeatherChestplate": {
+      "ItemSubtype": "Chest",
+      "ItemName": "Leather Chestplate",
+      "Stackable": "No",
+      "ItemLevelRequirement": 0,
+      "ItemRarity": "Common",
+      "AffixGroup": "ArmorCommon"
+    },
+    "LeatherPants": {
+      "ItemSubtype": "Legs",
+      "ItemName": "Leather Pants",
+      "Stackable": "No",
+      "ItemLevelRequirement": 0,
+      "ItemRarity": "Common",
+      "AffixGroup": "ArmorCommon"
+    },
+    "LeatherGloves": {
+      "ItemSubtype": "Hands",
+      "ItemName": "Leather Gloves ",
+      "Stackable": "No",
+      "ItemLevelRequirement": 0,
+      "ItemRarity": "Common",
+      "AffixGroup": "ArmorCommon"
+    },
+    "LeatherBelt": {
+      "ItemSubtype": "Belt",
+      "ItemName": "Leather Belt",
+      "Stackable": "No",
+      "ItemLevelRequirement": 0,
+      "ItemRarity": "Common",
+      "AffixGroup": "ArmorCommon"
+    },
+    "LeatherCloak": {
+      "ItemSubtype": "Back",
+      "ItemName": "Leather Cloak",
+      "Stackable": "No",
+      "ItemLevelRequirement": 0,
+      "ItemRarity": "Common",
+      "AffixGroup": "ArmorCommon"
+    },
+    "CopperHelmet": {
+      "ItemSubtype": "Head",
+      "ItemName": "Copper Helmet",
+      "Stackable": "No",
+      "ItemLevelRequirement": 5,
+      "ItemRarity": "Common",
+      "AffixGroup": "ArmorCommon"
+    },
+    "CopperBoots": {
+      "ItemSubtype": "Feet",
+      "ItemName": "Copper Boots",
+      "Stackable": "No",
+      "ItemLevelRequirement": 5,
+      "ItemRarity": "Common",
+      "AffixGroup": "ArmorCommon"
+    },
+    "IronHelmet": {
+      "ItemSubtype": "Head",
+      "ItemName": "Iron Helmet",
+      "Stackable": "No",
+      "ItemLevelRequirement": 10,
+      "ItemRarity": "Common",
+      "AffixGroup": "ArmorCommon"
+    },
+    "IronBoots": {
+      "ItemSubtype": "Feet",
+      "ItemName": "Iron Boots",
+      "Stackable": "No",
+      "ItemLevelRequirement": 10,
+      "ItemRarity": "Common",
+      "AffixGroup": "ArmorCommon"
+    },
+    "SteelHelmet": {
+      "ItemSubtype": "Head",
+      "ItemName": "Steel Helmet",
+      "Stackable": "No",
+      "ItemLevelRequirement": 15,
+      "ItemRarity": "Common",
+      "AffixGroup": "ArmorCommon"
+    },
+    "SteelBoots": {
+      "ItemSubtype": "Feet",
+      "ItemName": "Steel Boots",
+      "Stackable": "No",
+      "ItemLevelRequirement": 15,
+      "ItemRarity": "Common",
+      "AffixGroup": "ArmorCommon"
+    }
+  },
+  "CraftingMaterials": {
+    "Gold": {
+      "ItemRarity": "Common",
+      "ItemName": "Gold",
+      "Stackable": "Yes"
+    }
+  }
+}

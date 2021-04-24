@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends RigidBody2D
+
+var size
+
+func make_room(_pos, _size):
+	position = _pos
+	size = _size
+	var s = RectangleShape2D.new()
+	s.custom_solver_bias = 0.75
+	s.extents = size
+	$CollisionShape2D.shape = s
+
+func make_room_without_collision(_pos, _size):
+	position = _pos
+	size = _size
+	var s = RectangleShape2D.new()
+	s.custom_solver_bias = 0.75
+	s.extents = size
+	remove_child($CollisionShape2D)
+"
+
+[node name="Room" type="RigidBody2D"]
+collision_layer = 16
+collision_mask = 16
+mode = 2
+script = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

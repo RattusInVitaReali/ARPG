@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI Images/Over.png" type="Texture" id=1]
+[ext_resource path="res://UI Images/Under.png" type="Texture" id=2]
+[ext_resource path="res://UI Images/Progress.png" type="Texture" id=3]
+[ext_resource path="res://Utilities/Healthbar.gd" type="Script" id=4]
+
+[node name="HealthBar" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthBar" type="TextureProgress" parent="."]
+margin_right = 216.0
+margin_bottom = 48.0
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 1 )
+texture_progress = ExtResource( 3 )
+tint_progress = Color( 0.0705882, 0.6, 0.0784314, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

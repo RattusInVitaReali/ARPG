@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Items/Affixes/Affix.gd" type="Script" id=1]
+
+
+[resource]
+script = ExtResource( 1 )
+mandatory = false
+affix_name = "Additional Projectiles"
+min_value = 1.0
+max_value = 2.0
+weight = 10000
+show_as_percent = false
+integer = true

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Items/Affixes/Affix.gd" type="Script" id=1]
+
+
+[resource]
+script = ExtResource( 1 )
+mandatory = false
+affix_name = "Added Accuracy Rating"
+min_value = 50.0
+max_value = 200.0
+weight = 100
+show_as_percent = false
+integer = true

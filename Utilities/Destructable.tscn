@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Utilities/Hurtbox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Utilities/Destructable.gd" type="Script" id=2]
+
+[node name="Destructable" type="StaticBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Hurtbox" parent="." instance=ExtResource( 1 )]
+collision_layer = 8
+
+[editable path="Hurtbox"]
